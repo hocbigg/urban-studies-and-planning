@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://hocbigg.github.io/urban-studies-and-planning/sitemap.xml

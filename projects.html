@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+
+  <title>Projects</title>
+  <meta name="description" content="Projects curriculum by hocbigg.">
+  <meta name="author" content="hocbigg">
+
+  <link rel="canonical" href="https://hocbigg.github.io/urban-studies-and-planning/projects.html">
+  <meta property="og:title" content="Projects">
+  <meta property="og:description" content="Projects curriculum by hocbigg.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hocbigg.github.io/urban-studies-and-planning/projects.html">
+  <link rel="icon" href="https://hocbigg.github.io/images/favicon.ico">
+
+  <style>
+:root {
+  color-scheme: light dark;
+
+  --bg: #ffffff;
+  --fg: #1a1a1a;
+  --muted: #595959;
+  --border: #e0e0e0;
+  --th-bg: #f6f8fa;
+  --code-bg: #f4f4f4;
+  --link: #0969da;
+  --focus-ring: #0969da;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0d1117;
+    --fg: #e6edf3;
+    --muted: #8b949e;
+    --border: #30363d;
+    --th-bg: #161b22;
+    --code-bg: #161b22;
+    --link: #58a6ff;
+    --focus-ring: #58a6ff;
+  }
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 1.5rem auto;
+  max-width: 60rem;
+  padding: 0 1rem 3.5rem;
+  background-color: var(--bg);
+  color: var(--fg);
+  font: 1.15rem/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  
+  /* Cú pháp hiện đại thay thế cho word-wrap */
+  overflow-wrap: break-word;
+}
+
+.site-header {
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 1rem;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 0.5rem 1.25rem;
+  font-size: 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+nav a:hover, 
+nav a:focus-visible {
+  color: var(--fg);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+nav .nav-brand {
+  color: var(--fg);
+  font-weight: 700;
+  margin-right: 0.5rem;
+}
+
+.skip-link {
+  position: absolute;
+  transform: translateY(-150%);
+  left: 1rem;
+  background: var(--fg);
+  color: var(--bg);
+  padding: 0.5rem 1rem;
+  z-index: 100;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: transform 0.2s ease;
+}
+
+.skip-link:focus {
+  transform: translateY(1rem);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 3px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.3;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: var(--fg);
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-top: 0;
+}
+
+h2 {
+  font-size: 2rem;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid var(--border);
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+h5 {
+  font-size: 1.15rem;
+}
+
+h6 {
+  font-size: 1rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+p, ul, ol, blockquote, table {
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+}
+
+li > ul,
+li > ol {
+  margin-top: 0.25rem;
+  margin-bottom: 0;
+}
+
+li {
+  margin-bottom: 0.25rem;
+}
+
+a {
+  color: var(--link);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
+}
+
+a:has(img) {
+  text-decoration: none;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.page-header .page-subtitle {
+  color: var(--muted);
+  font-size: 1.15rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.page-header img {
+  margin: 0 auto 1rem;
+  display: block;
+}
+
+code {
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.875em;
+  background-color: var(--code-bg);
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+}
+
+pre {
+  background-color: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1rem;
+  overflow-x: auto;
+  tab-size: 2;
+}
+
+pre code {
+  background: transparent;
+  padding: 0;
+  border: none;
+  font-size: 0.9rem;
+  border-radius: 0;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+th, td {
+  border: 1px solid var(--border);
+  padding: 0.6rem 0.75rem;
+  vertical-align: top;
+}
+
+th {
+  background-color: var(--th-bg);
+  font-weight: 600;
+}
+
+blockquote {
+  margin-inline: 0;
+  border-left: 4px solid var(--border);
+  padding-left: 1rem;
+  color: var(--muted);
+  font-style: italic;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media print {
+  body {
+    max-width: none;
+    color: #000;
+    background: #fff;
+  }
+  .skip-link, nav {
+    display: none;
+  }
+}
+  </style>
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="site-header">
+    <nav aria-label="Main Navigation">
+    <ul>
+      <li><a href="https://hocbigg.github.io/" class="nav-brand">Hocbigg</a></li>
+      <li><a href="/urban-studies-and-planning/">Urban Studies And Planning</a></li>
+      <li><a href="/urban-studies-and-planning/advanced_topics.html">Advanced Topics</a></li>
+      <li><a href="/urban-studies-and-planning/projects.html">Projects</a></li>
+      <li><a href="https://github.com/hocbigg/urban-studies-and-planning" target="_blank" rel="noopener noreferrer">GitHub<span class="sr-only"> (opens in new tab)</span></a></li>
+    </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <article>
+
+<h1 id="projects">Projects</h1>
+<blockquote>
+<p>"What I cannot create, I do not understand." — Richard Feynman</p>
+</blockquote>
+<ul>
+<li><a href="#conduct-your-own-site-analysis">Site Analysis</a></li>
+<li><a href="#design-your-own-street-cross-section">Street Cross-Section</a></li>
+<li><a href="#build-your-own-transit-accessibility-map">Transit Accessibility Map</a></li>
+<li><a href="#publish-your-own-interactive-planning-storymap">Interactive Planning Storymap</a></li>
+<li><a href="#write-your-own-policy-brief">Policy Brief</a></li>
+<li><a href="#compile-your-own-community-needs-assessment">Community Needs Assessment</a></li>
+<li><a href="#conduct-your-own-walkability-audit">Walkability Audit</a></li>
+<li><a href="#record-your-own-community-oral-history">Community Oral History</a></li>
+<li><a href="#build-your-own-exploratory-scenario-plan">Exploratory Scenario Plan</a></li>
+<li><a href="#draft-your-own-climate-action-plan">Climate Action Plan</a></li>
+</ul>
+<h2 id="conduct-your-own-site-analysis">Conduct your own site analysis</h2>
+<p>Document and interpret the physical layout, natural systems, architectural character, and historical development layers of a specific parcel, street corner, or urban block.</p>
+<ul>
+<li><a href="https://ocw.mit.edu/courses/11-016j-the-once-and-future-city-spring-2015/pages/assignments/" target="_blank" rel="noopener noreferrer">Assignments Overview: Reading the City (MIT OpenCourseWare, Anne Whiston Spirn)</a> - A four-stage project workflow with guidelines for investigating site boundaries, natural processes, historical morphology, and physical traces of change.</li>
+<li><a href="https://ocw.mit.edu/courses/11-016j-the-once-and-future-city-spring-2015/pages/assignments/assignment-1-select-a-site/" target="_blank" rel="noopener noreferrer">Assignment 1: Select A Site (MIT OpenCourseWare, Anne Whiston Spirn)</a> - Step-by-step guidance on establishing observational boundaries, framing research questions, and recording baseline site conditions.</li>
+<li><a href="https://www.gov.wales/planning-developments-site-and-context-analysis-guide" target="_blank" rel="noopener noreferrer">Planning Developments: Site and Context Analysis Guide (Welsh Government / Design Commission for Wales)</a> - A comprehensive professional guide outlining how to evaluate microclimate, movement infrastructure, landscape features, and built-form scale.</li>
+</ul>
+<h2 id="design-your-own-street-cross-section">Design your own street cross-section</h2>
+<p>Reallocate existing roadway right-of-way among travel lanes, dedicated transit corridors, protected bike facilities, green infrastructure, and pedestrian sidewalks.</p>
+<ul>
+<li><a href="https://streetmix.net/" target="_blank" rel="noopener noreferrer">Streetmix</a> - An interactive, open-source web application for modeling, resizing, and illustrating complete street cross-sections to scale.</li>
+<li><a href="https://nacto.org/publication/urban-street-design-guide/" target="_blank" rel="noopener noreferrer">Urban Street Design Guide (National Association of City Transportation Officials)</a> - The primary open-access technical manual for dimensioning vehicular lanes, pedestrian bulb-outs, transit priority lanes, and stormwater curb extensions.</li>
+</ul>
+<h2 id="build-your-own-transit-accessibility-map">Build your own transit accessibility map</h2>
+<p>Model transit network performance and spatial coverage to identify service deserts and evaluate how effectively public transportation connects residents to employment.</p>
+<ul>
+<li><a href="https://learn.arcgis.com/en/projects/assess-access-to-public-transit/" target="_blank" rel="noopener noreferrer">Assess Access to Public Transit (Esri Learn ArcGIS)</a> - A hands-on tutorial calculating walking service areas around transit stops and overlaying demographic census data to locate underserved communities.</li>
+<li><a href="https://github.com/Esri/public-transit-tools" target="_blank" rel="noopener noreferrer">Transit Network Analysis Tools (GitHub, Esri)</a> - An open-source toolkit and documentation for building scheduled transit networks from General Transit Feed Specification (GTFS) data to analyze travel-time accessibility.</li>
+</ul>
+<h2 id="publish-your-own-interactive-planning-storymap">Publish your own interactive planning storymap</h2>
+<p>Translate technical urban plans, spatial datasets, and policy recommendations into an engaging, multimedia narrative format for public consultation.</p>
+<ul>
+<li><a href="https://learn.arcgis.com/en/projects/storify-a-planning-report/" target="_blank" rel="noopener noreferrer">Storify a Planning Report (Esri Learn ArcGIS)</a> - A step-by-step project transforming a municipal neighborhood plan into an interactive digital story using maps, 3D scenes, and community feedback mechanisms.</li>
+</ul>
+<h2 id="write-your-own-policy-brief">Write your own policy brief</h2>
+<p>Draft a concise, evidence-based document that translates technical urban research into concrete, actionable policy options for municipal decision-makers.</p>
+<ul>
+<li><a href="https://writingcenter.unc.edu/tips-and-tools/policy-briefs/" target="_blank" rel="noopener noreferrer">Policy Briefs (UNC Writing Center)</a> - A structured academic guide explaining the rhetorical structure, framing, audience tailoring, and formatting requirements of professional policy briefs.</li>
+<li><a href="https://idrc-crdi.ca/en/funding/resources-idrc-grantees/how-write-policy-brief" target="_blank" rel="noopener noreferrer">How to Write a Policy Brief (International Development Research Centre)</a> - Practical methodology on structuring executive summaries, policy alternatives, and research-backed recommendations for public officials.</li>
+<li><a href="https://www.capolicylab.org/wp-content/uploads/2023/05/Policy-Brief-Guide.pdf" target="_blank" rel="noopener noreferrer">Policy Briefs 101: A Guide for Translating Research Findings into Policy Impact (California Policy Lab)</a> - A practical walkthrough detailing visual hierarchy, editing timelines, and plain-language translation for policy documents.</li>
+</ul>
+<h2 id="compile-your-own-community-needs-assessment">Compile your own community needs assessment</h2>
+<p>Collect, synthesize, and analyze localized demographic, economic, and physical conditions to identify systemic service gaps and establish neighborhood priorities.</p>
+<ul>
+<li><a href="https://ctb.ku.edu/en/table-of-contents/assessment/assessing-community-needs-and-resources" target="_blank" rel="noopener noreferrer">Assessing Community Needs and Resources (Community Tool Box, University of Kansas)</a> - A step-by-step toolkit outlining survey design, asset mapping, focus groups, and secondary data synthesis for local communities.</li>
+<li>Housing Needs Assessment Tool (Local Housing Solutions / NYU Furman Center) - Search 'Housing Needs Assessment' on Local Housing Solutions for their framework on compiling local housing affordability metrics, rent burdens, and supply deficits.</li>
+</ul>
+<h2 id="conduct-your-own-walkability-audit">Conduct your own walkability audit</h2>
+<p>Execute a field-based safety and accessibility evaluation of a specific pedestrian corridor, documenting infrastructure deficiencies and micro-scale design barriers.</p>
+<ul>
+<li><a href="https://www.aarp.org/livable-communities/getting-around/aarp-walk-audit-tool-kit.html" target="_blank" rel="noopener noreferrer">AARP Walk Audit Tool Kit (AARP Livable Communities)</a> - A comprehensive toolkit featuring downloadable checklists and worksheets for assessing sidewalk continuousness, crossing safety, lighting, and driver behavior.</li>
+<li><a href="https://americawalks.org/all-about-walk-audits/" target="_blank" rel="noopener noreferrer">All About Walk Audits (America Walks)</a> - Methodological guidance on scouting routes, recruiting diverse audit teams, engaging local stakeholders, and converting field notes into advocacy campaigns.</li>
+<li><a href="https://americawalks.org/how-to-conduct-a-walk-audit-in-your-community-quick-video-guide-for-assessing-your-neighborhood-walkability/" target="_blank" rel="noopener noreferrer">How to Conduct a Walk Audit in Your Community (America Walks)</a> - A quick reference guide outlining ten procedural rules for executing safe and productive street audits.</li>
+</ul>
+<h2 id="record-your-own-community-oral-history">Record your own community oral history</h2>
+<p>Gather, record, and archive first-person qualitative testimonies from local residents to document the social memory and lived experience of neighborhood change.</p>
+<ul>
+<li><a href="https://folklife.si.edu/the-smithsonian-folklife-and-oral-history-interviewing-guide/smithsonian" target="_blank" rel="noopener noreferrer">The Smithsonian Folklife and Oral History Interviewing Guide (Smithsonian Center for Folklife and Cultural Heritage)</a> - A manual providing sample release forms, open-ended question guides, audio recording advice, and interview preservation protocols.</li>
+<li><a href="https://siarchives.si.edu/history/how-do-oral-history" target="_blank" rel="noopener noreferrer">How to Do Oral History (Smithsonian Institution Archives)</a> - Methodological steps for interviewee recruitment, pre-interview research, ethical obligations, and transcript processing.</li>
+<li><a href="https://oralhistory.org/principles-and-best-practices-revised-2018/" target="_blank" rel="noopener noreferrer">Principles and Best Practices for Oral History (Oral History Association)</a> - The established professional ethical and procedural standard for planning, conducting, archiving, and indexing oral narratives.</li>
+</ul>
+<h2 id="build-your-own-exploratory-scenario-plan">Build your own exploratory scenario plan</h2>
+<p>Develop a set of plausible alternative futures driven by critical uncertainties to test how community policies perform under unpredictable conditions.</p>
+<ul>
+<li><a href="https://www.lincolninst.edu/publications/policy-focus-reports/how-use-exploratory-scenario-planning-xsp" target="_blank" rel="noopener noreferrer">How to Use Exploratory Scenario Planning (XSP): Navigating an Uncertain Future (Lincoln Institute of Land Policy)</a> - A detailed manual with workshop agendas, matrix templates, and case studies for identifying driving forces, constructing scenario axes, and testing interventions.</li>
+<li><a href="https://www.planning.org/knowledgebase/scenarioplanning/" target="_blank" rel="noopener noreferrer">Scenario Planning KnowledgeBase (American Planning Association)</a> - A curated collection of practitioner guides, tool evaluations, and municipal case studies on integrating scenario analysis into master plans.</li>
+</ul>
+<h2 id="draft-your-own-climate-action-plan">Draft your own climate action plan</h2>
+<p>Formulate an integrated municipal framework establishing greenhouse gas emissions baselines, sectoral reduction targets, and local climate hazard adaptation measures.</p>
+<ul>
+<li><a href="https://www.c40knowledgehub.org/s/article/Introducing-the-climate-action-planning-guide-for-cities" target="_blank" rel="noopener noreferrer">Introducing the Climate Action Planning Guide for Cities (C40 Knowledge Hub)</a> - A modular step-by-step roadmap for scoping emission sources, developing climate vulnerability assessments, and prioritizing municipal mitigation actions.</li>
+<li><a href="https://www.c40knowledgehub.org/s/article/Climate-Action-Planning-Framework" target="_blank" rel="noopener noreferrer">Climate Action Planning Framework (C40 Knowledge Hub)</a> - The core technical standard defining baseline requirements, governance structures, and monitoring metrics for local climate resilience plans.</li>
+</ul>
+    </article>
+  </main>
+
+</body>
+</html>

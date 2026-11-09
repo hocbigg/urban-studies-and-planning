@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+
+  <title>Advanced Topics in Urban Studies and Planning</title>
+  <meta name="description" content="Advanced Topics in Urban Studies and Planning curriculum by hocbigg.">
+  <meta name="author" content="hocbigg">
+
+  <link rel="canonical" href="https://hocbigg.github.io/urban-studies-and-planning/advanced_topics.html">
+  <meta property="og:title" content="Advanced Topics in Urban Studies and Planning">
+  <meta property="og:description" content="Advanced Topics in Urban Studies and Planning curriculum by hocbigg.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hocbigg.github.io/urban-studies-and-planning/advanced_topics.html">
+  <link rel="icon" href="https://hocbigg.github.io/images/favicon.ico">
+
+  <style>
+:root {
+  color-scheme: light dark;
+
+  --bg: #ffffff;
+  --fg: #1a1a1a;
+  --muted: #595959;
+  --border: #e0e0e0;
+  --th-bg: #f6f8fa;
+  --code-bg: #f4f4f4;
+  --link: #0969da;
+  --focus-ring: #0969da;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0d1117;
+    --fg: #e6edf3;
+    --muted: #8b949e;
+    --border: #30363d;
+    --th-bg: #161b22;
+    --code-bg: #161b22;
+    --link: #58a6ff;
+    --focus-ring: #58a6ff;
+  }
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 1.5rem auto;
+  max-width: 60rem;
+  padding: 0 1rem 3.5rem;
+  background-color: var(--bg);
+  color: var(--fg);
+  font: 1.15rem/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  
+  /* Cú pháp hiện đại thay thế cho word-wrap */
+  overflow-wrap: break-word;
+}
+
+.site-header {
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 1rem;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 0.5rem 1.25rem;
+  font-size: 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+nav a:hover, 
+nav a:focus-visible {
+  color: var(--fg);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+nav .nav-brand {
+  color: var(--fg);
+  font-weight: 700;
+  margin-right: 0.5rem;
+}
+
+.skip-link {
+  position: absolute;
+  transform: translateY(-150%);
+  left: 1rem;
+  background: var(--fg);
+  color: var(--bg);
+  padding: 0.5rem 1rem;
+  z-index: 100;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: transform 0.2s ease;
+}
+
+.skip-link:focus {
+  transform: translateY(1rem);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 3px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.3;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: var(--fg);
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-top: 0;
+}
+
+h2 {
+  font-size: 2rem;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid var(--border);
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+h5 {
+  font-size: 1.15rem;
+}
+
+h6 {
+  font-size: 1rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+p, ul, ol, blockquote, table {
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+}
+
+li > ul,
+li > ol {
+  margin-top: 0.25rem;
+  margin-bottom: 0;
+}
+
+li {
+  margin-bottom: 0.25rem;
+}
+
+a {
+  color: var(--link);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
+}
+
+a:has(img) {
+  text-decoration: none;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.page-header .page-subtitle {
+  color: var(--muted);
+  font-size: 1.15rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.page-header img {
+  margin: 0 auto 1rem;
+  display: block;
+}
+
+code {
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.875em;
+  background-color: var(--code-bg);
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+}
+
+pre {
+  background-color: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1rem;
+  overflow-x: auto;
+  tab-size: 2;
+}
+
+pre code {
+  background: transparent;
+  padding: 0;
+  border: none;
+  font-size: 0.9rem;
+  border-radius: 0;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+th, td {
+  border: 1px solid var(--border);
+  padding: 0.6rem 0.75rem;
+  vertical-align: top;
+}
+
+th {
+  background-color: var(--th-bg);
+  font-weight: 600;
+}
+
+blockquote {
+  margin-inline: 0;
+  border-left: 4px solid var(--border);
+  padding-left: 1rem;
+  color: var(--muted);
+  font-style: italic;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media print {
+  body {
+    max-width: none;
+    color: #000;
+    background: #fff;
+  }
+  .skip-link, nav {
+    display: none;
+  }
+}
+  </style>
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="site-header">
+    <nav aria-label="Main Navigation">
+    <ul>
+      <li><a href="https://hocbigg.github.io/" class="nav-brand">Hocbigg</a></li>
+      <li><a href="/urban-studies-and-planning/">Urban Studies And Planning</a></li>
+      <li><a href="/urban-studies-and-planning/advanced_topics.html">Advanced Topics</a></li>
+      <li><a href="/urban-studies-and-planning/projects.html">Projects</a></li>
+      <li><a href="https://github.com/hocbigg/urban-studies-and-planning" target="_blank" rel="noopener noreferrer">GitHub<span class="sr-only"> (opens in new tab)</span></a></li>
+    </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <article>
+
+<h1 id="advanced-topics-in-urban-studies-and-planning">Advanced Topics in Urban Studies and Planning</h1>
+<p>Specialization tracks build directly on the core curriculum, allowing self-directed learners to transition from general planning foundations to specialized operational frameworks, quantitative methodologies, and policy subfields. Learners are encouraged to select one or two tracks that align with their professional or research goals rather than attempting to complete all tracks sequentially.</p>
+<ul>
+<li><strong>Transportation and Mobility Systems:</strong> Transit service operations, econometric travel demand modeling, multimodal street design, and parking economics.</li>
+<li><strong>Housing and Community Development:</strong> Subsidized housing program design, community-based development finance, property rights, and anti-displacement strategies.</li>
+<li><strong>Environmental Planning and Climate Resilience:</strong> Municipal energy decarbonization, nature-based infrastructure, urban climate adaptation, and disaster risk reduction.</li>
+<li><strong>Urban Analytics and Geospatial Methods:</strong> Advanced spatial data science in Python, automated geoprocessing workflows, PostGIS spatial databases, and agent-based simulation.</li>
+<li><strong>Real Estate Finance and Urban Development:</strong> Deal-level financial modeling, commercial real estate capital markets, site engineering, and master-planned development execution.</li>
+</ul>
+<h2 id="transportation-and-mobility-systems">Transportation and Mobility Systems</h2>
+<p>Covers the operational, economic, and engineering principles required to plan, design, and manage high-capacity multimodal transit networks and street spaces.</p>
+<p>Transit Operations and Service Planning: <a href="https://ocw.mit.edu/courses/1-258j-public-transportation-systems-spring-2017" target="_blank" rel="noopener noreferrer">Public Transportation Systems (MIT OpenCourseWare, Harilaos Koutsopoulos)</a> - A graduate lecture course covering route generation, stop spacing, headway determination, vehicle and crew scheduling, and automated data monitoring for bus and rail modes.</p>
+<p>Travel Demand Modeling and Choice Analysis: <a href="https://ocw.mit.edu/courses/1-201j-transportation-systems-analysis-demand-and-economics-fall-2008" target="_blank" rel="noopener noreferrer">Transportation Systems Analysis: Demand and Economics (MIT OpenCourseWare, Moshe Ben-Akiva)</a> - The definitive analytical treatment of discrete choice modeling, random utility theory, equilibrium assignment, and congestion pricing economics.</p>
+<p>Multimodal Street Design and Engineering: <a href="https://nacto.org/publication/urban-street-design-guide/" target="_blank" rel="noopener noreferrer">Urban Street Design Guide (National Association of City Transportation Officials)</a> - The primary open-access professional design standard for reallocating vehicular roadway capacity to transit lanes, cycle tracks, pedestrian bulb-outs, and traffic-calmed intersections.</p>
+<p>Parking Policy and Curb Space Management: <a href="https://books.google.com/books?isbn=9781884829987" target="_blank" rel="noopener noreferrer">The High Cost of Free Parking (Donald Shoup, Routledge)</a> - The seminal treatise on the microeconomics of off-street parking mandates, performance-priced curb space, and parking benefit districts.</p>
+<h2 id="housing-and-community-development">Housing and Community Development</h2>
+<p>Focuses on housing market intervention, public subsidies, community-scale organizing, and the property-rights institutions that govern equitable neighborhood revitalization.</p>
+<p>Community-Based Development Practice: <a href="https://ocw.mit.edu/courses/11-401-introduction-to-housing-community-and-economic-development-fall-2015" target="_blank" rel="noopener noreferrer">Introduction to Housing, Community, and Economic Development (MIT OpenCourseWare, Lawrence Vale)</a> - A foundational graduate seminar addressing racial inequality, public housing redevelopment, community land trusts, and neighborhood stabilization strategies.</p>
+<p>Housing Policy, Subsidies, and Affordability: <a href="https://books.google.com/books?isbn=9780367563912" target="_blank" rel="noopener noreferrer">Housing Policy in the United States, 4th ed. (Alex F. Schwartz, Routledge)</a> - The authoritative textbook analyzing the mechanics of Low-Income Housing Tax Credits (LIHTC), tenant-based vouchers, public housing transformation, and fair housing litigation.</p>
+<p>Community Economic Development Finance: <a href="https://ocw.mit.edu/courses/11-437-financing-economic-development-fall-2016" target="_blank" rel="noopener noreferrer">Financing Economic Development (MIT OpenCourseWare, Karl Seidman)</a> - Practical coursework detailing the capital structures behind community development financial institutions (CDFIs), Tax Increment Financing (TIF), and New Markets Tax Credits.</p>
+<p>Informal Settlements and Global Land Rights: <a href="https://ocw.mit.edu/courses/11-483-housing-and-land-use-in-rapidly-urbanizing-regions-fall-2011" target="_blank" rel="noopener noreferrer">Housing and Land Use in Rapidly Urbanizing Regions (MIT OpenCourseWare, Annette Kim)</a> - An interdisciplinary exploration of property rights formalization, spatial land law, and housing markets across fast-growing cities in the Global South.</p>
+<h2 id="environmental-planning-and-climate-resilience">Environmental Planning and Climate Resilience</h2>
+<p>Examines technical, ecological, and policy frameworks for mitigating urban greenhouse gas emissions, managing climatic hazards, and designing resilient infrastructure.</p>
+<p>Urban Energy Systems and Decarbonization: <a href="https://ocw.mit.edu/courses/11-165j-urban-energy-systems-and-policy-fall-2022" target="_blank" rel="noopener noreferrer">Urban Energy Systems and Policy (MIT OpenCourseWare, David Hsu)</a> - A full-term video-lecture course on municipal building energy codes, district thermal networks, renewable grid integration, and utility regulatory reform.</p>
+<p>Nature-Based Solutions and Urban Green Infrastructure: <a href="https://www.coursera.org/learn/urban-nature" target="_blank" rel="noopener noreferrer">Urban Nature: Connecting Cities, Sustainability and Innovation (Coursera / Lund University, Harriet Bulkeley &amp; Kes McCormick)</a> - A structured MOOC covering the governance, financing, and biophysical deployment of blue-green networks, bioswales, and urban ecosystem restoration.</p>
+<p>Climate Change Adaptation and Spatial Planning: <a href="https://www.coursera.org/learn/climate-change-africa" target="_blank" rel="noopener noreferrer">Planning for Climate Change in African Cities (Coursera / Erasmus University Rotterdam IHS, Shuaib Lwasa &amp; Stelios Grafakos)</a> - Focuses on municipal vulnerability assessments, spatial risk mapping, and infrastructure mainstreaming under severe resource constraints and climatic exposure.</p>
+<p>Urban Disaster Risk Management and Resilience: <a href="https://openknowledge.worldbank.org/handle/10986/13109" target="_blank" rel="noopener noreferrer">Building Urban Resilience: Principles, Tools, and Practice (World Bank, Abhas K. Jha, Todd W. Miner &amp; Zuzana Stanton-Geddes)</a> - An open-access operational handbook covering probabilistic hazard modeling, land-use risk zoning, and post-disaster reconstruction frameworks.</p>
+<h2 id="urban-analytics-and-geospatial-methods">Urban Analytics and Geospatial Methods</h2>
+<p>Provides the computational, programmatic, and algorithmic toolkit required to model complex spatial structures and evaluate metropolitan big data.</p>
+<p>Spatial Data Science with Python: <a href="https://geographicdata.science/book/" target="_blank" rel="noopener noreferrer">Geographic Data Science with Python (Sergio J. Rey, Dani Arribas-Bel &amp; Levi John Wolf)</a> - An open-access interactive text covering spatial weight matrices, exploratory spatial data analysis (ESDA), spatial clustering, and spatial regression using PySAL.</p>
+<p>Automated Geospatial Workflows: <a href="https://autogis-site.readthedocs.io/" target="_blank" rel="noopener noreferrer">Automating GIS Processes (University of Helsinki / Digital Geography Lab)</a> - An applied programming course centered on automating spatial workflows, vector operations in GeoPandas, and network routing using OSMnx.</p>
+<p>Spatial Databases and Spatial SQL: <a href="https://postgis.net/workshops/postgis-intro/" target="_blank" rel="noopener noreferrer">Introduction to PostGIS (PostGIS Project / Boundless &amp; Paul Ramsey)</a> - A hands-on technical workshop teaching PostgreSQL and PostGIS spatial indexing, topological relationships, and spatial SQL joins on large urban datasets.</p>
+<p>Agent-Based Simulation for Urban Systems: <a href="https://ocw.tudelft.nl/courses/agent-based-modeling-complex-adaptive-systems-advanced/" target="_blank" rel="noopener noreferrer">Agent Based Modeling of Complex Adaptive Systems (advanced) (TU Delft OpenCourseWare, Igor Nikolic)</a> - Focuses on designing, calibrating, and validating bottom-up agent-based models to simulate human decision-making and emergent urban patterns.</p>
+<h2 id="real-estate-finance-and-urban-development">Real Estate Finance and Urban Development</h2>
+<p>Explores the private-sector mechanisms of physical development, financial underwriting, capital markets, and site-level civil infrastructure coordination.</p>
+<p>Real Estate Investment and Micro-Level Valuation: <a href="https://ocw.mit.edu/courses/11-431j-real-estate-finance-and-investment-fall-2006" target="_blank" rel="noopener noreferrer">Real Estate Finance and Investment (MIT OpenCourseWare, David Geltner)</a> - Covers discounted cash flow (DCF) modeling, property before-tax cash flows, capitalization rate theory, and deal-level debt leverage.</p>
+<p>Real Estate Capital Markets and Securitization: <a href="https://ocw.mit.edu/courses/11-432j-real-estate-capital-markets-spring-2007" target="_blank" rel="noopener noreferrer">Real Estate Capital Markets (MIT OpenCourseWare, David Geltner)</a> - Explores public commercial real estate vehicles, Real Estate Investment Trusts (REITs), commercial mortgage-backed securities (CMBS) structuring, and real estate portfolio theory.</p>
+<p>The Real Estate Development Process: <a href="https://books.google.com/books?isbn=9780874204773" target="_blank" rel="noopener noreferrer">Professional Real Estate Development: The ULI Guide to the Business, 4th ed. (Richard B. Peiser &amp; Suzanne Lanyi Charles, Urban Land Institute)</a> - The standard industry reference for underwriting feasibility, assembling site control, managing municipal entitlements, and navigating construction delivery across asset classes.</p>
+<p>Site Planning and Civil Infrastructure Systems: <a href="https://ocw.mit.edu/courses/11-304j-site-and-infrastructure-systems-planning-spring-2009" target="_blank" rel="noopener noreferrer">Site and Infrastructure Systems Planning (MIT OpenCourseWare)</a> - Project-based studio instruction in topography, grading, utility layout, stormwater management systems, and parcelization design for complex developments.</p>
+    </article>
+  </main>
+
+</body>
+</html>

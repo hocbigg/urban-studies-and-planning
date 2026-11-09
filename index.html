@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+
+  <title>Hocbigg - Urban Studies and Planning</title>
+  <meta name="description" content="Path to a free self-taught education in Urban Studies and Planning.">
+  <meta name="author" content="hocbigg">
+
+  <link rel="canonical" href="https://hocbigg.github.io/urban-studies-and-planning/">
+  <meta property="og:title" content="Hocbigg - Urban Studies and Planning">
+  <meta property="og:description" content="Path to a free self-taught education in Urban Studies and Planning.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hocbigg.github.io/urban-studies-and-planning/">
+  <link rel="icon" href="https://hocbigg.github.io/images/favicon.ico">
+
+  <style>
+:root {
+  color-scheme: light dark;
+
+  --bg: #ffffff;
+  --fg: #1a1a1a;
+  --muted: #595959;
+  --border: #e0e0e0;
+  --th-bg: #f6f8fa;
+  --code-bg: #f4f4f4;
+  --link: #0969da;
+  --focus-ring: #0969da;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0d1117;
+    --fg: #e6edf3;
+    --muted: #8b949e;
+    --border: #30363d;
+    --th-bg: #161b22;
+    --code-bg: #161b22;
+    --link: #58a6ff;
+    --focus-ring: #58a6ff;
+  }
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 1.5rem auto;
+  max-width: 60rem;
+  padding: 0 1rem 3.5rem;
+  background-color: var(--bg);
+  color: var(--fg);
+  font: 1.15rem/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  
+  /* Cú pháp hiện đại thay thế cho word-wrap */
+  overflow-wrap: break-word;
+}
+
+.site-header {
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 1rem;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 0.5rem 1.25rem;
+  font-size: 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+nav a:hover, 
+nav a:focus-visible {
+  color: var(--fg);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+nav .nav-brand {
+  color: var(--fg);
+  font-weight: 700;
+  margin-right: 0.5rem;
+}
+
+.skip-link {
+  position: absolute;
+  transform: translateY(-150%);
+  left: 1rem;
+  background: var(--fg);
+  color: var(--bg);
+  padding: 0.5rem 1rem;
+  z-index: 100;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: transform 0.2s ease;
+}
+
+.skip-link:focus {
+  transform: translateY(1rem);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 3px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.3;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: var(--fg);
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-top: 0;
+}
+
+h2 {
+  font-size: 2rem;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid var(--border);
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+h5 {
+  font-size: 1.15rem;
+}
+
+h6 {
+  font-size: 1rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+p, ul, ol, blockquote, table {
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+}
+
+li > ul,
+li > ol {
+  margin-top: 0.25rem;
+  margin-bottom: 0;
+}
+
+li {
+  margin-bottom: 0.25rem;
+}
+
+a {
+  color: var(--link);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
+}
+
+a:has(img) {
+  text-decoration: none;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.page-header .page-subtitle {
+  color: var(--muted);
+  font-size: 1.15rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.page-header img {
+  margin: 0 auto 1rem;
+  display: block;
+}
+
+code {
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.875em;
+  background-color: var(--code-bg);
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+}
+
+pre {
+  background-color: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1rem;
+  overflow-x: auto;
+  tab-size: 2;
+}
+
+pre code {
+  background: transparent;
+  padding: 0;
+  border: none;
+  font-size: 0.9rem;
+  border-radius: 0;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+th, td {
+  border: 1px solid var(--border);
+  padding: 0.6rem 0.75rem;
+  vertical-align: top;
+}
+
+th {
+  background-color: var(--th-bg);
+  font-weight: 600;
+}
+
+blockquote {
+  margin-inline: 0;
+  border-left: 4px solid var(--border);
+  padding-left: 1rem;
+  color: var(--muted);
+  font-style: italic;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media print {
+  body {
+    max-width: none;
+    color: #000;
+    background: #fff;
+  }
+  .skip-link, nav {
+    display: none;
+  }
+}
+  </style>
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="site-header">
+    <nav aria-label="Main Navigation">
+    <ul>
+      <li><a href="https://hocbigg.github.io/" class="nav-brand">Hocbigg</a></li>
+      <li><a href="/urban-studies-and-planning/">Urban Studies And Planning</a></li>
+      <li><a href="/urban-studies-and-planning/advanced_topics.html">Advanced Topics</a></li>
+      <li><a href="/urban-studies-and-planning/projects.html">Projects</a></li>
+      <li><a href="https://github.com/hocbigg/urban-studies-and-planning" target="_blank" rel="noopener noreferrer">GitHub<span class="sr-only"> (opens in new tab)</span></a></li>
+    </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <article>
+<header class="page-header">
+  <img src="/images/logo.png" alt="Hocbigg logo">
+  <h1>Hocbigg - Urban Studies and Planning</h1>
+  <p class="page-subtitle">Path to a free self-taught education in Urban Studies and Planning.</p>
+  <p class="last-updated"><small>Last updated on: <time datetime="2026-10-08">2026-10-08</time></small></p>
+</header>
+<h2 id="introduction">Introduction</h2>
+<p>Urban studies investigates how cities form, function, and evolve, drawing on sociology, economics, history, and geography to understand urban life. Urban planning is the applied, deliberate practice of intervening in that built and social environment—shaping land use, housing, transportation networks, and public space to balance economic viability, environmental resilience, and social equity. Together, they provide both the analytical lens to diagnose urban challenges and the practical tools to design interventions.</p>
+<p>This curriculum is built for independent learners starting with no prior background in design, economics, or public policy. It assumes no institutional affiliation, proprietary software, or academic database access. Foundational concepts are introduced from first principles, and technical methods rely on accessible, open platforms like QGIS. </p>
+<p>This guide is designed for individuals seeking a comprehensive, grounded understanding of the discipline rather than an exhaustive academic research track. It focuses on the core conceptual models and real-world mechanisms that planners and urbanists use, bypassing narrow academic debates and specialized research methodologies.</p>
+<h3 id="how-the-sequence-works">How the Sequence Works</h3>
+<p>The curriculum is structured into ten core subjects that build logically from broad historical context to specialized physical systems and spatial data methods:</p>
+<ul>
+<li><strong>Social and Historical Foundations:</strong> The opening modules (<em>Introduction to Urban Studies</em>, <em>Urban History and the Evolution of Planning</em>, and <em>Urban Sociology and Community Dynamics</em>) examine the origins of cities, historical urban planning movements, and how neighborhood composition and social inequalities shape daily life.</li>
+<li><strong>Mechanisms of Planning and Form:</strong> The middle modules (<em>Planning Theory and Practice</em>, <em>Urban Design and City Form</em>, <em>Urban Economics</em>, and <em>Land Use Planning, Zoning, and Urban Law</em>) cover how cities are actively regulated and shaped. Here you will learn about the planner's professional role, physical morphology, market forces and land rents, and the legal frameworks governing property and zoning.</li>
+<li><strong>Infrastructure and Environmental Systems:</strong> The next modules (<em>Transportation and Urban Mobility</em> and <em>Urban Sustainability and Environmental Planning</em>) address the networked systems that keep cities functioning, focusing on transit network design, multi-modal access, decarbonization, and climate resilience.</li>
+<li><strong>Spatial Literacy:</strong> The final module (<em>Urban Data, Mapping, and Basic Spatial Analysis</em>) equips you with the practical ability to visualize census data, interpret municipal plans, and perform fundamental geographic information systems (GIS) workflows.</li>
+</ul>
+<p>While you can dip into individual topics independently, following the suggested sequence ensures that regulatory, economic, and design concepts are clearly established before you encounter them in transportation or environmental systems.</p>
+<h3 id="scope-and-next-steps">Scope and Next Steps</h3>
+<p>This page contains only the essential core subjects that represent the shared baseline of an undergraduate education in urban planning. It intentionally omits specialized career tracks, advanced econometric modeling, and complex development finance. </p>
+<p>Once you have worked through these core foundations, you can branch out into specific subfields:</p>
+<ul>
+<li>Explore specialized tracks—such as housing policy, urban analytics, climate resilience, and transit operations—in <a href="advanced_topics.html">Advanced Topics</a>.</li>
+<li>Apply your skills by creating real-world planning deliverables, such as site analyses, walkability audits, and policy briefs, in <a href="projects.html">Projects</a>.</li>
+</ul>
+<h2 id="curriculum">Curriculum</h2>
+<h3 id="introduction-to-urban-studies">Introduction to Urban Studies</h3>
+<p>Examines why cities form, how urbanization shapes social life and global economies, and the primary debates surrounding what makes urban areas thrive.</p>
+<p><a href="https://www.edx.org/learn/urban-planning/harvard-university-citiesx-the-past-present-and-future-of-urban-life" target="_blank" rel="noopener noreferrer">CitiesX: The Past, Present and Future of Urban Life (edX / HarvardX, Edward Glaeser)</a> - The primary video-based survey for this subject, offering an accessible, interdisciplinary overview of global urbanization that is free to audit.</p>
+<p><a href="https://books.google.com/books?isbn=9780367204792" target="_blank" rel="noopener noreferrer">The City Reader, 7th ed. (Routledge, LeGates &amp; Stout)</a> - A comprehensive anthology of foundational texts in urban studies; read selections that correlate with the weekly topics in CitiesX rather than reading it cover to cover.</p>
+<p><a href="https://books.google.com/books?isbn=9780143120544" target="_blank" rel="noopener noreferrer">Triumph of the City (Edward Glaeser, Penguin Books)</a> - An accessible, single-author narrative alternative to CitiesX covering similar economic and historical principles, suitable for learners who prefer sustained reading over video lectures.</p>
+<h3 id="urban-history-and-the-evolution-of-planning">Urban History and the Evolution of Planning</h3>
+<p>Traces the spatial and social development of cities from ancient origins through industrialization to modern planning movements.</p>
+<p><a href="https://books.google.com/books?isbn=9781118456477" target="_blank" rel="noopener noreferrer">Cities of Tomorrow: An Intellectual History of Urban Planning and Design Since 1880, 4th ed. (Peter Hall, Wiley-Blackwell)</a> - The definitive narrative textbook on modern planning ideas, detailing the social and intellectual movements that responded to the industrial city.</p>
+<p><a href="https://books.google.com/books?isbn=9780156180351" target="_blank" rel="noopener noreferrer">The City in History: Its Origins, Its Transformations, and Its Prospects (Lewis Mumford, Mariner Books)</a> - A seminal classic providing historical depth on the civilizational role of cities from antiquity to the early 20th century; read selected early chapters to establish historical context prior to Hall.</p>
+<p><a href="https://ocw.mit.edu/courses/11-016j-the-once-and-future-city-spring-2015" target="_blank" rel="noopener noreferrer">The Once and Future City (MIT OpenCourseWare, Anne Whiston Spirn)</a> - A practical, field-based guide providing structured assignment prompts for "reading" and documenting the historical artifacts and spatial layers of your own local built environment.</p>
+<h3 id="urban-sociology-and-community-dynamics">Urban Sociology and Community Dynamics</h3>
+<p>Explores neighborhood structures, social networks, urban inequalities, and the ways physical environments shape community life.</p>
+<p><a href="https://www.coursera.org/learn/urban-development" target="_blank" rel="noopener noreferrer">Cities are back in town : urban sociology for a globalizing urban world (Coursera / Sciences Po, Patrick Le Galès)</a> - The core instructional lecture course for this subject, surveying sociological theories from the Chicago School to contemporary urban political economy with global comparative cases; free to audit.</p>
+<p><a href="https://books.google.com/books?isbn=9780679741958" target="_blank" rel="noopener noreferrer">The Death and Life of Great American Cities (Jane Jacobs, Vintage Books)</a> - The canonical, essential text on sidewalk ballet, street-level social cohesion, and the organic vitality of urban neighborhoods; read alongside the Coursera lectures.</p>
+<p><a href="https://books.google.com/books?isbn=9780525433692" target="_blank" rel="noopener noreferrer">Evicted: Poverty and Profit in the American City (Matthew Desmond, Broadway Books)</a> - A contemporary ethnographic study that grounds sociological theories of poverty, housing insecurity, and neighborhood exploitation in vivid real-world detail.</p>
+<h3 id="planning-theory-and-practice">Planning Theory and Practice</h3>
+<p>Covers the role of the professional planner, decision-making frameworks, procedural ethics, and the political context of public planning interventions.</p>
+<p><a href="https://books.google.com/books?isbn=9781032270531" target="_blank" rel="noopener noreferrer">Contemporary Urban Planning, 12th ed. (John M. Levy, Sonia A. Hirt &amp; Casey J. Dawkins, Routledge)</a> - The standard introductory textbook covering the political frameworks, institutional histories, and everyday practice of comprehensive planning.</p>
+<p><a href="https://ocw.mit.edu/courses/11-201-gateway-to-the-profession-of-planning-fall-2010" target="_blank" rel="noopener noreferrer">Gateway to the Profession of Planning (MIT OpenCourseWare, Bishwapriya Sanyal)</a> - A complementary seminar providing lecture notes and structured debate prompts exploring rational planning, incrementalism, advocacy planning, and professional ethics to deepen Levy's overview.</p>
+<h3 id="urban-design-and-city-form">Urban Design and City Form</h3>
+<p>Analyzes the physical configuration of the built environment, spatial perception, street networks, and human-scale public spaces.</p>
+<p><a href="https://ocw.mit.edu/courses/4-241j-theory-of-city-form-spring-2013" target="_blank" rel="noopener noreferrer">Theory of City Form (MIT OpenCourseWare, Julian Beinart)</a> - A complete 25-lecture video course examining historical theories and morphological models of city form from antiquity to the present; use this as the visual and conceptual spine.</p>
+<p><a href="https://books.google.com/books?isbn=9780262620017" target="_blank" rel="noopener noreferrer">The Image of the City (Kevin Lynch, MIT Press)</a> - A foundational text introducing cognitive mapping and the five elements of urban form (paths, edges, districts, nodes, and landmarks); read in conjunction with Beinart's lectures.</p>
+<p><a href="https://books.google.com/books?isbn=9781597268271" target="_blank" rel="noopener noreferrer">Life Between Buildings: Using Public Space, 6th ed. (Jan Gehl, Island Press)</a> - A practical, human-scale field guide detailing how street design, sightlines, and edge conditions encourage or inhibit public social activity.</p>
+<h3 id="urban-economics">Urban Economics</h3>
+<p>Investigates market forces shaping cities, agglomeration economies, land-rent gradients, housing submarkets, and local public finance.</p>
+<p><a href="https://books.google.com/books?isbn=9781260084498" target="_blank" rel="noopener noreferrer">Urban Economics, 9th ed. (Arthur O'Sullivan, McGraw-Hill)</a> - The foundational textbook explaining why cities exist, firm clustering, the monocentric city model, and urban growth dynamics (earlier editions are widely available for open digital library borrowing).</p>
+<p><a href="https://ocw.mit.edu/courses/11-202-planning-economics-fall-2010" target="_blank" rel="noopener noreferrer">Planning Economics (MIT OpenCourseWare, Frank Levy)</a> - An applied open-courseware companion providing lecture notes, problem sets, and solutions that apply microeconomic tools like cost-benefit analysis, externalities, and public goods directly to planning scenarios.</p>
+<h3 id="land-use-planning-zoning-and-urban-law">Land Use Planning, Zoning, and Urban Law</h3>
+<p>Surveys regulatory frameworks, comprehensive planning mechanisms, the police power, zoning ordinances, and property law jurisprudence.</p>
+<p><a href="https://books.google.com/books?isbn=9781642832549" target="_blank" rel="noopener noreferrer">Arbitrary Lines: How Zoning Broke the American City and How to Fix It (M. Nolan Gray, Island Press)</a> - An accessible, critical primer explaining the history, mechanics, and systemic consequences of single-use Euclidean zoning, serving as a readable conceptual on-ramp.</p>
+<p><a href="https://ocw.mit.edu/courses/11-360-community-growth-and-land-use-planning-fall-2010" target="_blank" rel="noopener noreferrer">Community Growth and Land Use Planning (MIT OpenCourseWare, Terry Szold)</a> - Provides practical planning tools, project guidelines, and regulatory strategies for managing growth, corridor development, and comprehensive plan drafting.</p>
+<p><a href="https://ocw.mit.edu/courses/11-493-legal-aspects-of-property-and-land-use-fall-2005" target="_blank" rel="noopener noreferrer">Legal Aspects of Property and Land Use (MIT OpenCourseWare, Balakrishnan Rajagopal)</a> - Explores the underlying constitutional and common-law doctrines—including takings, eminent domain, and exclusionary zoning—that govern land use regulation.</p>
+<h3 id="transportation-and-urban-mobility">Transportation and Urban Mobility</h3>
+<p>Examines street hierarchies, public transit network design, multi-modal systems, and the policy trade-offs inherent in mobility planning.</p>
+<p><a href="https://books.google.com/books?isbn=9781642833058" target="_blank" rel="noopener noreferrer">Human Transit, Revised Edition (Jarrett Walker, Island Press)</a> - An indispensable primer on the geometric and operational principles governing public transit networks, focusing on the trade-offs between ridership and geographic coverage.</p>
+<p><a href="https://ocw.mit.edu/courses/1-252j-urban-transportation-planning-fall-2016" target="_blank" rel="noopener noreferrer">Urban Transportation Planning (MIT OpenCourseWare, Frederick Salvucci)</a> - Comprehensive lecture notes providing a masterclass on the political, institutional, and environmental realities of financing and executing metropolitan transport projects.</p>
+<h3 id="urban-sustainability-and-environmental-planning">Urban Sustainability and Environmental Planning</h3>
+<p>Focuses on climate resilience, ecological infrastructure, circular urban metabolism, and equitable environmental transitions.</p>
+<p><a href="https://www.coursera.org/learn/gte-sustainable-cities" target="_blank" rel="noopener noreferrer">Greening the Economy: Sustainable Cities (Coursera / Lund University, Harriet Bulkeley)</a> - A structured foundational MOOC examining urban decarbonization, nature-based solutions, and sustainable infrastructure transitions; free to audit.</p>
+<p><a href="https://www.edx.org/learn/urban-planning/delft-university-of-technology-rethink-the-city-new-approaches-to-global-and-local-urban-challenges" target="_blank" rel="noopener noreferrer">Rethink the City: New Approaches to Global and Local Urban Challenges (edX / TU Delft)</a> - An essential complementary course emphasizing spatial justice, informal housing, and climate resilience in the Global South; free to audit.</p>
+<p><a href="https://ocw.mit.edu/courses/11-366j-planning-for-sustainable-development-spring-2006" target="_blank" rel="noopener noreferrer">Planning for Sustainable Development (MIT OpenCourseWare, David Laws &amp; Martin Rein)</a> - A supplementary reading seminar providing deeper policy analysis on local climate action plans and organizational governance.</p>
+<h3 id="urban-data-mapping-and-basic-spatial-analysis">Urban Data, Mapping, and Basic Spatial Analysis</h3>
+<p>Builds practical spatial data literacy, map design principles, and desktop GIS workflows for visualizing and analyzing urban demographic and land use patterns.</p>
+<p><a href="https://courses.ems.psu.edu/maps/" target="_blank" rel="noopener noreferrer">Maps and the Geospatial Revolution (Penn State / Dutton Institute, Anthony C. Robinson)</a> - A self-paced, open-access course teaching fundamental spatial thinking, coordinate reference systems, and cartographic design principles; start here before touching mapping software.</p>
+<p><a href="https://ocw.mit.edu/courses/res-str-001-geographic-information-system-gis-tutorial-january-iap-2022" target="_blank" rel="noopener noreferrer">Geographic Information System (GIS) Tutorial (MIT OpenCourseWare)</a> - A concise, beginner-friendly introduction to software navigation, layer structures, and basic map compilation using either ArcGIS Pro or open-source QGIS.</p>
+<p><a href="https://ocw.mit.edu/courses/11-205-introduction-to-spatial-analysis-fall-2019" target="_blank" rel="noopener noreferrer">Introduction to Spatial Analysis (MIT OpenCourseWare, Sarah Williams &amp; Eric Robsky Huntley)</a> - An applied planning laboratory featuring instructional demonstration videos and practical exercises (available for both QGIS and ArcGIS) covering geocoding, proximity buffers, spatial joins, and census data analysis.</p>
+    </article>
+  </main>
+
+</body>
+</html>
